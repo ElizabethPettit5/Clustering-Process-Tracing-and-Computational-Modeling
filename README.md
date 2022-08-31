@@ -8,7 +8,7 @@ These are .txt files of the raw E-Prime data from the original experiment publis
   Ex: file 24_3.txt corresponds to participant #24 who saw deck order #3
   Explanation of deck orders can be found within the Cleaning Process Tracing branch in the Counterbalance Order Explanation.pdf
 IGT_Clusters_PLog.xlsx:
-  In the original experiment some participants’ data could not be used. Therefore, the participant numbers do not increase ordinally from 1-44. This Excel sheet contains the key with the original participant number and what it was changed to for the analysis of this project. The files and folders included later in the analysis process will use the updated participant naming scheme so that loops can run smoothly without any breaks in participant numbers. Variable names are as such: k1= Direct Cluster's frequency; k2=Arrowhead Cluster's frequency; k3=Exploratory Cluster's Frequency.
+  In the original experiment some participants’ data could not be used. Therefore, the participant numbers do not increase ordinally from 1-44. This Excel sheet contains the key with the original participant number and what it was changed to for the analysis of this project. The files and folders included later in the analysis process will use the updated participant naming scheme so that loops can run smoothly without any breaks in participant numbers. Variable names are as such: k1= Direct Cluster's frequency; k2=Exploratory Cluster's frequency; k3=Arrowhead Cluster's Frequency.
 
 
 
@@ -45,7 +45,7 @@ This resulted in 4 separate Euclidean distance matrices, one for each deck. Each
     (2) Exploratory: This cluster is almost X-shaped, showing heavy exploration of other decks before the participant decided on the deck of interest.
     (3) Arrowhead: This cluster shows some exploration, especially towards adjacent decks to the deck of interest. Eventually, the participant ends up crashing into the bounds of the search space before circling back to the chosen deck.
 This resulted in a total of 12 clusters, 3 for each deck. Thus, each instance was assigned to one of the 12 clusters. This was recorded in MasterLog_IGT_Clusters.xlsx as the variable k(12).
-  Clusters were then collapsed into the 3 main trajectory shapes described above. For example, clusters 1,4,7 and 10 were all Direct clusters belonging to decks A, B, C and D respectively. Therefore, for the k(3) variable within MasterLog_IGT_Clusters.xlsx, all 4 clusters were coded as k=1. Clusters 2,5,8 and 11 were all Exploratory and coded as k=2. Clusters 3,6,9 and 12 were all Arrowhead and coded as k=3.
+  Clusters were then collapsed into the 3 main trajectory shapes described above. For example, clusters 1,4,9 and 11 were all Direct clusters belonging to decks A, B, C and D respectively. Therefore, for the k variable within MasterLog_IGT_Clusters.xlsx, all 4 clusters were coded as k=1. Clusters 2,6,8 and 12 were all Exploratory and coded as k=2. Clusters 3,5,7 and 10 were all Arrowhead and coded as k=3.
 
 
 
