@@ -12,14 +12,9 @@ EVL_IGT_PLog.xlsx
 
 
 
-EVL Model
+Computational Modeling
 
-3 different MATLAB functions were used to fit parameters for each participant. The data files used for these functions follow the naming format “P_EVL.xlsx”. The exact file format is explained in the comments of the first MATLAB function, but each essentially contains the sequence of gain, losses, and choice of deck on all 100 trials for each participant. All MATLAB files can be found in the EVL Model folder.
-  EVL_EPjj.m – this file contains the actual EVL model and produces a matrix of predicted choice probabilities based on the participant’s actual choices
-  EVL_chisq.m – this file calculates the chi square between the participant’s actual choice matrix and the predicted choice matrix produced by EVL_EPjj.m
-  Actual choice matrix is 100(trial) X 4(deck) containing 0’s and 1’s of whether the participant chose one of the four decks for a trial. For example, if deck 3 was chosen on trial 1, for row 1, column 3 would contain a 1 but columns 1,2&4 would contain a 0.
-raster.m – this file contains code for a raster plot with starting values for each parameter within the search space. This is done so that the search has a starting point that is equally spaced in order to avoid the optimization routine settling on a local minimum for all 3 parameters rather than the preferred global minimum.
-  In sum, raster.m feeds parameter values into EVL_EPjj.m to calculate the predicted choice probability for that participant based off those 3 specific parameter values. Then, EVL_chisq.m calculates the chi square between the predicted choice matrix and the P’s actual choice matrix. The raster plot then searches the parameter space for values that will result in a smaller chi square, until the smallest chi square value is acquired. The 3 parameters associated with the minimum chi square are deemed the best fit.
+All computational modeling for this experiment was complete using the toolbox created by Dr. Romain Ligneul (https://github.com/romainligneul/igt-toolbox). The data file can be found in the Computational Modeling branch and is named IGTdata.mat. Model fits can also be found in this branch.
 
 
 
@@ -59,16 +54,6 @@ This resulted in a total of 12 clusters, 3 for each deck. Thus, each instance wa
 
 
 
-Mixed Model Regression
+Correlation Between Clusters and Parameters
 
-To reiterate, the goal of this project was to investigate the relationship between EVL model parameters and process tracing data to determine whether physical manifestations of cognitive processes involved during the IGT are reflected in a combination of parameters.
-The proposed multinomial logistic regression could not be complete due to the following data restrictions:
-Lack of independence: Each participant is associated with 100 trials of deck choice with the same 3 EVL model parameters corresponding to each trial
-  Correlation between independent variables: The a parameter was strongly correlated with r(r=.70) and weakly with c(r=.31. r and c were also moderately correlated (r=-.49).
-  The variables included in the model are as follows:
-    Cluster (nominal, 3 levels) 
-    Attention to loss parameter (continuous 0 to 1)
-    Recency parameter (continuous 0 to 1)
-    Choice constancy parameter (continuous -5 to 5)
-    Time block (ordinal 1 to 5)
-    Deck chosen (nominal 1 to 4)
+To reiterate, the goal of this project was to investigate the relationship between computational model parameters and process tracing data to determine whether physical manifestations of cognitive processes involved during the IGT are reflected in a combination of parameters.
