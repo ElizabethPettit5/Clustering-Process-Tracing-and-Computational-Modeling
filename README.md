@@ -8,7 +8,7 @@ These are .txt files of the raw E-Prime data from the original experiment publis
   Ex: file 24_3.txt corresponds to participant #24 who saw deck order #3
   Explanation of deck orders can be found within the Cleaning Process Tracing branch in the Counterbalance Order Explanation.pdf
 
-IGT_Clusters_PLog.xlsx
+IGT_Clusters_PLog.xlsx:
   In the original experiment some participants’ data could not be used. Therefore, the participant numbers do not increase ordinally from 1-44. This Excel sheet contains the key with the original participant number and what it was changed to for the analysis of this project. The files and folders included later in the analysis process will use the updated participant naming scheme so that loops can run smoothly without any breaks in participant numbers.
 
 
